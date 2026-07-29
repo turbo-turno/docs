@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Turnus Docs",
   "colors": {
-    "primary": "#0E7C86",
-    "light": "#14B8A6",
-    "dark": "#0B5D64"
+    "primary": "#C9B400",
+    "light": "#FFF440",
+    "dark": "#C9B400"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -77,16 +77,11 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "turnus.ai",
+      "href": "https://turnus.ai"
     }
   },
   "contextual": {
@@ -103,10 +98,27 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
     }
   },
-  "description": "Regulatorik-Glossar und Produktdokumentation von Turnus – Erklärungen zu Konformitätserklärungen, REACH, RoHS, Konfliktminerale und mehr für Lieferanten und Kunden."
+  "description": "Regulatorik-Glossar und Produktdokumentation von Turnus – Erklärungen zu Konformitätserklärungen, REACH, RoHS, Konfliktminerale und mehr für Lieferanten und Kunden.",
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#F7F7F5",
+      "dark": "#1D1D1F"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Plus Jakarta Sans",
+      "weight": 700
+    },
+    "body": {
+      "family": "Plus Jakarta Sans",
+      "weight": 400
+    }
+  }
 }
