@@ -7,7 +7,10 @@
     "light": "#FFF440",
     "dark": "#C9B400"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/favicon.png",
+    "dark": "/favicon.svg"
+  },
   "navigation": {
     "pages": [
       {
@@ -73,8 +76,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/light.svg",
+    "dark": "/images/dark.svg"
   },
   "navbar": {
     "links": [],
@@ -112,13 +115,7 @@
     }
   },
   "fonts": {
-    "heading": {
-      "family": "Plus Jakarta Sans",
-      "weight": 700
-    },
-    "body": {
-      "family": "Plus Jakarta Sans",
-      "weight": 400
-    }
+    "family": "Plus Jakarta Sans",
+    "weight": 400
   }
 }
