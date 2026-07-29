@@ -9,23 +9,86 @@ icon: "certificate"
   Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
 </Warning>
 
+<Note>
+  **Status bei Turnus:** Angaben zu dieser Regularie werden aktuell zuverlässig in deiner Erklärung erkannt, aber noch nicht automatisiert ausgewertet. Deine Angaben werden erfasst und stehen für die manuelle Prüfung zur Verfügung.
+</Note>
+
 ## Was ist China RoHS?
 
-China RoHS 2 (MIIT-Verordnung Nr. 32) folgt derselben Stoff-Logik wie die EU-RoHS-Richtlinie, aber mit einem eigenen Durchsetzungsmodell über Kennzeichnung und Katalog – ohne CE-Kennzeichnung und ohne EU-Ausnahmesystem.
+Chinas "Verwaltungsmaßnahmen zur Beschränkung gefährlicher Stoffe in Elektro- und Elektronikprodukten" (China RoHS 2) beschränkt dieselben Stoffe wie EU RoHS mit identischen Grenzwerten je homogenem Material (GB/T 26572-2011; die verbindliche GB 26572-2025 steht bevor). Es handelt sich primär um eine **Kennzeichnungs- und Offenlegungsregelung**: konforme Produkte tragen das grüne "e"-Logo, Produkte oberhalb der Grenzwerte tragen die **orangene EFUP-Kennzeichnung** (Environment-Friendly Use Period in Jahren) plus eine X/O-Stofftabelle im Handbuch (SJ/T 11364). Katalogprodukte benötigen zusätzlich eine Konformitätsbewertung (Zertifizierung oder Selbsterklärung).
 
-## Was wird geprüft?
+**So liest man eine Erklärung:**
 
-- **10 Stoffe** – die ursprünglichen 6 (Pb, Hg, Cd, Cr VI, PBB, PBDE) plus 4 Phthalate, die ab 1. Januar 2026 hinzukommen.
-- **Grenzwerte:** identisch zu EU RoHS – Cadmium 0,01 %, die übrigen neun Stoffe je 0,1 %, jeweils pro homogenem Material.
-- **Zweistufige Durchsetzung:** (1) Alle betroffenen Produkte müssen eine Kennzeichnung/Offenlegung tragen; (2) nur Produkte auf dem Compliance Management Catalog müssen die Grenzwerte tatsächlich einhalten und eine Konformitätsbewertung durchlaufen – für Katalog-Produkte ab 1. Januar 2027 verpflichtend.
-- **Kennzeichnung (SJ/T 11364-2024):** grünes "e"-Logo, wenn nichts einen Grenzwert überschreitet; orangener Kreis mit EPUP-Nummer (Environmental Protection Use Period), falls doch – zusätzlich eine Tabelle mit ○ (alle homogenen Materialien im Limit) bzw. × (mindestens eines darüber) pro Bauteil.
+- "Grenzwerte identisch zu EU RoHS II" ist eine übliche Lieferantenformulierung — China RoHS kennt aber **kein Annex-III-Ausnahmesystem**: oberhalb des Grenzwerts bedeutet orangene Kennzeichnung \+ Offenlegung, keine Ausnahme-Zitierung.
+- Zitate von SJ/T 11363-2006 beziehen sich auf den abgelösten Grenzwertstandard — veraltete Referenz, gleiche Werte.
 
-## Was bedeutet das für dich als Lieferant?
+## Beispieltexte
 
-Dieselben Daten wie bei EU RoHS – Konzentration aller 10 Stoffe pro homogenem Material – plus zusätzlich, ob dein Produkt auf dem chinesischen Compliance Management Catalog steht, sowie die Daten für die ○/×-Tabelle und die EPUP-Zuordnung.
+**Regulär:**
 
-## Mögliche Status in deiner Anfrage
+```text
+"[Lieferant] bestätigt, dass die Produkte innerhalb [Scope] den China-RoHS-Stoffbeschränkungen entsprechen und die geregelten gefährlichen Stoffe nicht in Konzentrationen oberhalb der Grenzwerte von [Standard] enthalten (identisch zu den EU-RoHS-II-Grenzwerten); die grüne 'e'-Kennzeichnung ist anwendbar."
+```
 
-**Alle ○ (grünes "e")**, **enthält × (oranges EPUP)**, **Katalog – Konformität bewertet** oder **offen – Klärung nötig**. Details zur allgemeinen Status-Logik: [Status & Verdicts](/glossar/status-und-verdicts).
+**Mit Bedingung:**
 
-Siehe auch: [Glossar](/glossar) · [RoHS (EU)](/regulatorik/rohs)
+```text
+"Die Erzeugnisse [...] enthalten [Stoff] (CAS [Nummer]) oberhalb des Grenzwerts in [Material]. Die Produkte tragen die orangene Kennzeichnung mit einer EFUP von [Jahre] Jahren; die Stofftabelle (X/O je Bauteil) liegt im Produkthandbuch bei."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Alle beschränkten Stoffe liegen unterhalb der GB/T-26572-Grenzwerte in homogenen Materialien → die grüne "e"-Kennzeichnung ist anwendbar.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein Gehalt oberhalb des Grenzwerts ist korrekt behandelt: orangene Kennzeichnung mit EFUP-Jahren und X/O-Offenlegungstabelle; eine Katalog-Konformitätsbewertung (Zertifikat-/Selbsterklärungsnummer); oder eine zitierte Katalog-Ausnahme.
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Ein Gehalt oberhalb des Grenzwerts ohne Kennzeichnung/Offenlegung, oder ein Katalogprodukt ohne Konformitätsbewertung.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Bewertung läuft noch.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt — häufig, da viele Erklärungen China RoHS nur als eine einzelne Tabellenspalte abdecken.
+  </Accordion>
+</AccordionGroup>
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro Über-Grenzwert-Offenlegung:
+
+- **Stoff \+ CAS-Nummer**
+- **Konzentration \+ homogenes Material / Bauteil**
+- **EFUP-Jahre** laut orangener Kennzeichnung
+- **Verweis auf die X/O-Tabelle** (welche Bauteile mit X markiert sind)
+- Bei Katalogprodukten: Zertifikat-/Selbsterklärungsnummer
+
+## Referenzversion
+
+- **`china-gb26572-2025`** — GB 26572-2025, verbindlicher Grenzwertstandard (angekündigt Sep. 2025)
+- **`china-gbt26572-2011`** — GB/T 26572-2011, Grenzwertstandard (Werte identisch zu EU RoHS)
+
+Bestimmung: der zitierte Standard bestimmt die Version — GB 26572-2025 oder GB/T 26572-2011. Zitate von SJ/T 11363-2006 werden auf `china-gbt26572-2011` gemappt (gleiche Werte, Referenz wird als veraltet vermerkt). Ohne Zitat gilt der zum Dokumentdatum gültige Standard. Sonst bleibt die Version unbestimmt.
+
+## Geltungsbereich (Scope)
+
+- Der Geltungsbereich umfasst auf dem chinesischen Markt platzierte Elektro-/Elektronikgeräte; pauschale Bestätigungen ("alle gelieferten Produkte, von China RoHS betroffen") sind der Normalfall.
+- Kennzeichnungsaussagen ("grüne 'e' anwendbar") sind Geltungsbereichs-Beleg für die abgedeckten Erzeugnisse.
+- Über-Grenzwert-Erzeugnisse (typischerweise dieselben Messing-/Blei-Fälle wie bei EU RoHS) bilden eine eigene Bedingungsgruppe.
+
+## Quellen
+
+- Ankündigung GB 26572-2025 (SGS-Zusammenfassung): [https://www.sgs.com/en-us/news/2025/09/safeguards-13725-china-issues-mandatory-rohs-standard-gb-26572-2025](https://www.sgs.com/en-us/news/2025/09/safeguards-13725-china-issues-mandatory-rohs-standard-gb-26572-2025)
+- ChemLinked China-RoHS-2-Überblick: [https://chemical.chemlinked.com/chempedia/china-rohs-administrative-measures-restriction-use-certain-hazardous-substances-electrical-and-electronic-products-china-rohs-2](https://chemical.chemlinked.com/chempedia/china-rohs-administrative-measures-restriction-use-certain-hazardous-substances-electrical-and-electronic-products-china-rohs-2)
+- TÜV SÜD China-RoHS-II-FAQ: [https://www.tuvsud.com/en/services/product-certification/global-market-access/china/china-rohs-ii-faq](https://www.tuvsud.com/en/services/product-certification/global-market-access/china/china-rohs-ii-faq)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar) · [EU RoHS](/regulatorik/rohs)

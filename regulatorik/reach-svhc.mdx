@@ -1,0 +1,109 @@
+---
+title: "REACH SVHC — Kandidatenliste / Art. 33"
+sidebarTitle: "SVHC"
+description: "Informationspflicht für besonders besorgniserregende Stoffe (SVHC) oberhalb 0,1 % w/w."
+icon: "flask"
+---
+
+<Warning>
+  Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
+</Warning>
+
+<Note>
+  **Status bei Turnus:** Diese Regularie wird aktuell automatisiert interpretiert — Verdict, Referenzversion, Scope und Bedingungen werden aus deiner Erklärung abgeleitet.
+</Note>
+
+## Was ist REACH SVHC?
+
+REACH (Verordnung (EG) Nr. 1907/2006) ist die EU-Chemikalienverordnung. Für uns als nachgeschalteten Verwender von Erzeugnissen ist der operative Mechanismus die **SVHC-Kandidatenliste**: Die ECHA führt eine Liste besonders besorgniserregender Stoffe (Substances of Very High Concern), die etwa zweimal jährlich erweitert wird. Nach **Art. 33** muss ein Lieferant eines Erzeugnisses, das einen SVHC-Stoff oberhalb von **0,1 Gewichtsprozent (w/w)** enthält, dies kommunizieren — mindestens den Stoffnamen, plus verfügbare Informationen zur sicheren Verwendung.
+
+**So liest man eine Lieferantenerklärung:**
+
+- "REACH-konform" bedeutet in der Lieferantensprache meist: kein SVHC über 0,1 % w/w, bezogen auf eine konkrete Version der Kandidatenliste.
+- Der Schwellenwert gilt **pro (Teil-)Erzeugnis** — "einmal Erzeugnis, immer Erzeugnis" (EuGH-Grundsatz, C‑106/14) — nicht pro Produkt, Lieferung oder homogenes Material.
+- Eine Erklärung ist nur sinnvoll im Bezug auf eine **Version der Kandidatenliste** — die Liste wächst mit der Zeit.
+- SVHC-Gehalt oberhalb des Schwellenwerts ist **kein Verbot**: Das Erzeugnis darf weiterhin geliefert werden, aber die Informationspflicht nach Art. 33 greift — zusätzlich zur SCIP-Meldung (Abfallrahmenrichtlinie (EU) 2018/851).
+
+## Beispieltexte
+
+**Regulär:**
+
+```text
+"[Lieferant] bestätigt, dass alle an [Unternehmen] gelieferten Erzeugnisse keine Stoffe der SVHC-Kandidatenliste ([Listenversion]) in Konzentrationen über 0,1 % w/w pro Erzeugnis enthalten."
+```
+
+**Mit Bedingung:**
+
+```text
+"[Lieferant] bestätigt, dass die gelieferten Erzeugnisse REACH-konform sind. Folgende Erzeugnisse enthalten [Stoff] (CAS [Nummer]), gelistet auf der SVHC-Kandidatenliste, oberhalb von 0,1 % w/w: [Erzeugnisse]. Informationen zur sicheren Verwendung: [...]. Die betroffenen Erzeugnisse sind bei der ECHA-SCIP-Datenbank gemeldet; SCIP-Nummern: [...]."
+```
+
+Ein deklarierter SVHC-Gehalt mit ordnungsgemäßer Art.-33-Kommunikation ist eine Konformität **mit Bedingung**, keine Nicht-Konformität.
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Der Lieferant bestätigt positiv, dass kein SVHC-Stoff der referenzierten Kandidatenlisten-Version oberhalb von 0,1 % w/w pro (Teil-)Erzeugnis enthalten ist. Pauschale Bestätigungen ("alle gelieferten Produkte") zählen für den abgedeckten Umfang als compliant.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Der Lieferant bestätigt REACH-Konformität, deklariert aber einen oder mehrere SVHC-Stoffe oberhalb von 0,1 % w/w für bestimmte Erzeugnisse — MIT den Art.-33-Angaben (Stoffname, i. d. R. CAS-Nummer, Informationen zur sicheren Verwendung). Deklarierter SVHC-Gehalt mit ordnungsgemäßer Kommunikation ist konform mit Bedingung, NICHT nicht-konform.
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Der Lieferant erklärt, dass Erzeugnisse die REACH-Pflichten nicht erfüllen, oder deklariert SVHC oberhalb des Schwellenwerts, ohne die erforderlichen Art.-33-Angaben zu liefern.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Der Lieferant erklärt, dass die Prüfung noch läuft oder eine Erklärung nachgereicht wird.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Das Dokument erlaubt keine Bewertung für die betroffenen Erzeugnisse (schweigt, weicht aus oder widerspricht sich zu REACH SVHC).
+  </Accordion>
+</AccordionGroup>
+
+Es gilt nie eine bessere Bewertung, als das Dokument hergibt. Behandelt eine Erklärung Erzeugnisgruppen unterschiedlich, wird in mehrere Gruppen aufgeteilt statt gemittelt.
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro deklariertem SVHC-Stoff:
+
+- **Stoffname** — gesetzliches Minimum nach Art. 33.
+- **CAS-Nummer**
+- **Max. Konzentration** (% w/w pro Erzeugnis)
+- **Betroffene Erzeugnisse / Bauteil**
+- **Informationen zur sicheren Verwendung** — Art.-33-Inhalt
+- **SCIP-Nummer** — gesetzliche Pflicht des Lieferanten, aber KEINE Voraussetzung für "compliant\_with\_conditions"
+
+Fehlende Einzelangaben senken hier nie den Verdict herab: deklarierter SVHC-Gehalt bleibt `compliant_with_conditions`, solange der Lieferant kommuniziert statt zu verweigern.
+
+## Referenzversion
+
+Aktuelle Kandidatenliste: **253 Stoffe** (Stand 4. Feb. 2026). Die Liste wird ca. zweimal jährlich erweitert.
+
+Bestimmung der Listenversion:
+
+1. **Explizite Nennung** — das Dokument nennt eine Version per Datum oder Stoffanzahl.
+2. **Dokumentdatum** — keine explizite Nennung, aber ein zuordenbares Datum: Es gilt die zu diesem Zeitpunkt gültige, zuletzt veröffentlichte Version.
+3. **Unbestimmt** — sonst bleibt die Version leer und wird manuell nachgetragen.
+
+## Geltungsbereich (Scope)
+
+- **Pauschal** — "alle gelieferten Produkte", "unser gesamtes Lieferprogramm": deckt alle von diesem Lieferanten bezogenen Erzeugnisse ab.
+- **Ausnahme-Scope** — "alle Erzeugnisse außer ...": die allgemeine Aussage deckt alles minus der genannten Ausnahmen; die Ausnahmen bilden eine eigene Gruppe.
+- **Benannte Erzeugnisse** — konkrete Teilenummern oder Bezeichnungen.
+- **Serien-/Familien-Formulierungen** — oft nicht gegen Stammdaten auflösbar; als ungelöst markiert statt geraten.
+
+Bekanntes Ausnahmemuster: **Blei (CAS 7439-92-1) in Messing-/Kupferlegierungsteilen** (Steckverbinder, Gehäuse, Kontakteinsätze) oberhalb 0,1 % w/w — der klassische Fall für Konformität mit Bedingung. Cadmiumbeschichtung ist der zweithäufigste Fall.
+
+## Quellen
+
+- ECHA-Kandidatenliste: [https://echa.europa.eu/candidate-list-table](https://echa.europa.eu/candidate-list-table)
+- ECHA SCIP: [https://echa.europa.eu/scip](https://echa.europa.eu/scip)
+- EUR-Lex, Verordnung 1907/2006 (konsolidiert): [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1907](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1907)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar) · [REACH Annex XIV](/regulatorik/reach-annex14) · [REACH Annex XVII](/regulatorik/reach-annex17)

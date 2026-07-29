@@ -9,24 +9,89 @@ icon: "droplet"
   Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
 </Warning>
 
+<Note>
+  **Status bei Turnus:** Angaben zu dieser Regularie werden aktuell zuverlässig in deiner Erklärung erkannt, aber noch nicht automatisiert ausgewertet. Deine Angaben werden erfasst und stehen für die manuelle Prüfung zur Verfügung.
+</Note>
+
 ## Was ist PFAS?
 
-PFAS ist eine Gruppe von mehr als 10.000 synthetischen Substanzen, die wegen ihrer chemischen Stabilität wasser-, fett- und schmutzabweisend wirken — aber genau deshalb extrem langlebig sind und sich in Umwelt und Organismen anreichern können. Es gibt **keine einzelne PFAS-Regulierung**: Die durchsetzbaren Regeln verteilen sich aktuell auf mehrere Rechtsakte.
+PFAS ist eine Stofffamilie (über 10.000 Stoffe, OECD-2021-Definition), kein einzelnes Gesetz. Aktuell operativ relevant: die POP-Verordnung (PFOA, PFOS, PFHxS — Klassengrenzwert 0,025 mg/kg), REACH-Annex-XVII-Einträge 68 (C9–C14-PFCA) und 79 (PFHxA, Einführung ab Okt. 2026), US-TSCA-§8(a)(7)-Meldepflicht sowie US-Bundesstaatengesetze (Minnesota-Meldepflicht, Maine-Kategorieverbote). Die geplante EU-weite **PFAS-Universalbeschränkung** ist noch nicht in Kraft.
 
-## Was wird geprüft?
+**So liest man eine Erklärung:**
 
-- **Unter POP (Annex I):** PFOS, PFOA \+ verwandte Stoffe, PFHxS \+ verwandte Stoffe (siehe [POP-Seite](/regulatorik/pop)).
-- **Unter REACH Annex XVII, Eintrag 68:** C9–C14-PFCAs, 25 ppb Summe der Säuren/Salze, 260 ppb Summe verwandter Stoffe.
-- **Unter REACH Annex XVII, Eintrag 79:** PFHxA, 25 ppb \+ Salze, 1.000 ppb verwandte Stoffe — verwendungsspezifisch, gestaffelte Anwendungsdaten ab ca. 2026.
-- **Eine "universelle" EU-weite PFAS-Beschränkung ist derzeit nur vorgeschlagen** (SEAC-Konsultation, Entscheidung der EU-Kommission voraussichtlich 2027) — aktuell **noch keine verbindliche Pflicht** daraus.
-- **USA:** TSCA Section 8(a)(7) verlangt eine Meldepflicht für alle seit dem 1. Januar 2011 importierten PFAS-haltigen Erzeugnisse — **ohne Bagatellgrenze**.
+- Die meisten PFAS-Erklärungen sind **Transparenzaussagen**, keine rechtlichen Konformitätsaussagen: "kein PFAS absichtlich den Produkten zugesetzt oder als Verarbeitungshilfsmittel verwendet".
+- Eine PFAS-frei-Aussage ist nur im Bezug auf eine **Definition** sinnvoll (meist OECD 2021) — Fluorpolymere (auch PTFE!) sind PFAS. Eine Aussage ohne genannte Definition bleibt compliant, ist aber ein schwacher Beleg — wird vermerkt.
+- Beschränkte PFAS fallen unter POP-/Annex-XVII-Grenzwerte; andere PFAS sind offenlegungspflichtig, aktuell aber in der EU nicht beschränkt.
 
-## Was bedeutet das für dich als Lieferant?
+## Beispieltexte
 
-Dein Kunde fragt typischerweise die Konzentration der namentlich benannten PFAS-Stoffe (PFOS, PFOA, PFHxS, C9–C14-PFCAs, PFHxA) sowie ggf. einen Gesamt-Fluor-Screen ab, da gezielte Labormethoden nur einen kleinen Teil der über 10.000 PFAS-Verbindungen einzeln erfassen. Wichtig ist außerdem die **Verwendungskategorie**, da einige Grenzwerte verwendungsspezifisch sind.
+**Regulär:**
 
-## Mögliche Status in deiner Anfrage
+```text
+"[Lieferant] erklärt, dass die Produkte innerhalb [Scope] kein PFAS (per- und polyfluorierte Alkylsubstanzen, OECD-2021-Definition) enthalten und dass keine PFAS als Verarbeitungshilfsmittel in der Fertigung verwendet werden."
+```
 
-**Kein PFAS**, **PFAS vorhanden**, **absichtlich zugesetzt** oder **TSCA-8(a)(7)-meldepflichtig**. Mehr zur allgemeinen Status-Logik: [Status & Verdicts](/glossar/status-und-verdicts).
+**Mit Bedingung:**
 
-Siehe auch: [Glossar](/glossar) · [POP](/regulatorik/pop) · [TSCA](/regulatorik/tsca)
+```text
+"Die Erzeugnisse [...] enthalten [Stoff] (CAS [Nummer]) mit [Konzentration], Funktion: [Funktion], im Bauteil [Komponente]. Beschränkte PFAS liegen unterhalb der geltenden Grenzwerte ([Grenzwert]) / die Verwendung ist durch Derogation [Eintrag] bis [Datum] abgedeckt."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Kein PFAS absichtlich zugesetzt und keines als Verarbeitungshilfsmittel verwendet (Definition genannt oder klar impliziert).
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    PFAS ist enthalten, aber: beschränkte PFAS liegen unterhalb ihrer POP-/Annex-XVII-Grenzwerte (Werte angegeben), nicht beschränkte PFAS werden offengelegt (Identität, Konzentration, Funktion, Ort), oder die Verwendung ist durch eine Derogation abgedeckt (Eintrag \+ Ablauf).
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Ein beschränktes PFAS liegt oberhalb seines Grenzwerts, oder eine Produktkategorie ist in einer relevanten Jurisdiktion verboten.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Der Lieferant erklärt, dass die PFAS-Bewertung/Datenerhebung noch läuft — aktuell ein häufiger Fall.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt oder weicht zu PFAS aus.
+  </Accordion>
+</AccordionGroup>
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro deklariertem PFAS:
+
+- **PFAS-Identität \+ CAS-Nummer** (oder benannte Untergruppe, z. B. "C9–C14-PFCA")
+- **Konzentration (ppm)**
+- **Funktion im Erzeugnis** und **Einbauort**
+- Beschränkte PFAS (PFOA / PFOS / PFHxS / C9–C14-PFCA / PFHxA): Wert vs. geltender Grenzwert
+- Derogationsfälle: Eintrag \+ Ablauf
+
+## Referenzversion
+
+Kein einheitliches Register — Aussagen beziehen sich auf die zitierte Definition oder das jeweils geregelte EU-Set:
+
+- **`pfas-eu-2026`** — EU-geregeltes Set: POP (PFOA/PFOS/PFHxS) \+ REACH-Annex-XVII-Einträge 68/79, Stand Apr. 2026
+- **`pfas-oecd-2021`** — OECD-2021-PFAS-Definition (Grundlage für PFAS-frei-Aussagen)
+
+Bestimmung: explizite Nennung (OECD 2021 oder benanntes geregeltes Set) → Mapping auf den Katalog. Sonst: Dokumentdatum → bei aktuellen Dokumenten das EU-geregelte Set. Sonst bleibt die Version unbestimmt.
+
+## Geltungsbereich (Scope)
+
+- Der Scope umfasst Produkte UND Fertigung: "als Verarbeitungshilfsmittel verwendet" ist Teil der Standardaussage — eine Aussage nur zum Produkt ist enger gefasst.
+- Typische Träger: Dichtungen, Beschichtungen, Schmierstoffe, PTFE-Teile, Kabelisolierung.
+- PFAS in Verpackungen (PPWR-Grenzwerte) ist ein angrenzendes Thema — wird vermerkt, aber nicht in den Geltungsbereich dieser Regularie eingerechnet.
+
+## Quellen
+
+- ECHA PFAS-Beschränkung (Hot Topic): [https://echa.europa.eu/hot-topics/perfluoroalkyl-chemicals-pfas](https://echa.europa.eu/hot-topics/perfluoroalkyl-chemicals-pfas)
+- EPA TSCA §8(a)(7) PFAS-Meldepflicht: [https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/tsca-section-8a7-reporting-and-recordkeeping](https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/tsca-section-8a7-reporting-and-recordkeeping)
+- Minnesota PCA — PFAS in Produkten: [https://www.pca.state.mn.us/business-with-us/pfas-in-products](https://www.pca.state.mn.us/business-with-us/pfas-in-products)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar) · [POP](/regulatorik/pop) · [REACH Annex XVII](/regulatorik/reach-annex17)

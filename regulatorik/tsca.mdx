@@ -9,28 +9,89 @@ icon: "flag-usa"
   Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
 </Warning>
 
-## Was ist TSCA?
+<Note>
+  **Status bei Turnus:** Angaben zu dieser Regularie werden aktuell zuverlässig in deiner Erklärung erkannt, aber noch nicht automatisiert ausgewertet. Deine Angaben werden erfasst und stehen für die manuelle Prüfung zur Verfügung.
+</Note>
 
-Der Toxic Substances Control Act (TSCA) ist das zentrale US-Chemikaliengesetz. Relevant für Erzeugnisse sind vor allem die §6(h)-PBT-Regeln (persistent, bioakkumulierend, toxisch) für fünf namentlich benannte Stoffe.
+## Was ist US TSCA?
 
-## Was wird geprüft?
+Das US-Bundeschemikaliengesetz (EPA). Für Lieferanten von Erzeugnissen sind zwei Prüfungen relevant: (1) alle Stoffe müssen **aktiv im TSCA-Inventory** sein, und (2) keiner der fünf **Section-6(h)-PBT-Stoffe** darf enthalten sein (finale Regeln 6. Jan. 2021, überarbeitet Nov. 2024): decaBDE (CAS 1163-19-5), PIP (3:1) (68937-41-7), 2,4,6-TTBP (732-26-3), HCBD (87-68-3), PCTP (133-49-3).
 
-| Stoff | CAS | Grenzwert/Regel |
-| --- | --- | --- |
-| DecaBDE | 1163-19-5 | Weitgehendes Verbot; Ausnahme fu00fcr Erzeugnisse \< 0,1 %, falls nicht absichtlich zugesetzt |
-| PIP (3:1) | 68937-41-7 | Ab 31. Oktober 2026 Vertriebsverbot in Erzeugnissen (mit Nutzungsausnahmen, z. B. Leiterplatten) |
-| 2,4,6-TTBP | 732-26-3 | Vertriebsverbot \> 0,3 Gew.-% in kleinen Behältern |
-| HCBD | 87-68-3 | Praktisch vollständig verboten (Ausnahme: unbeabsichtigtes Nebenprodukt) |
-| PCTP | 133-49-3 | Verboten \> 1 Gew.-% |
+**So liest man eine Erklärung:**
 
-Zusätzlich verlangt **TSCA §13** bei der Einfuhr eine **Importzertifizierung** (positiv: "alle Stoffe TSCA-konform" oder negativ: "nicht TSCA-pflichtig").
+- Bei Anwesenheit eines 6(h)-Stoffs gelten Kommunikationspflichten vergleichbar mit REACH Art. 33.
+- Die 2024er-Regel führte eine **De-minimis-Schwelle von 0,1 %** für unbeabsichtigt vorhandenes decaBDE und PIP (3:1) ein.
+- Ausnahmen (z. B. Kfz-/Luftfahrt-Ersatzteile) und gestaffelte Umsetzungsfristen (z. B. PIP (3:1) in HLK-/Labor-/Halbleiteranlagen bis 31. Okt. 2026) halten Erzeugnisse unter Bedingungen marktfähig.
+- "Produkte enthalten kein TSCA" ist eine bedeutungslose Lieferantenformulierung — als §6(h)- plus Inventory-Bestätigung lesen (compliant), Unschärfe vermerken.
 
-## Was bedeutet das für dich als Lieferant?
+## Beispieltexte
 
-Dein Kunde fragt in der Regel Anwesenheit und Konzentration jedes der fünf Stoffe pro Bauteil ab, dazu eine explizite Angabe, ob ein Fund **absichtlich zugesetzt** oder eine **unbeabsichtigte Verunreinigung** ist — das ist bei mehreren dieser Stoffe entscheidend für die Bewertung. Bei PIP (3:1) zusätzlich die konkrete **Verwendungsausnahme-Kategorie**.
+**Regulär:**
 
-## Mögliche Status in deiner Anfrage
+```text
+"[Lieferant] erklärt, dass die Produkte innerhalb [Scope] dem US Toxic Substances Control Act (TSCA) inklusive Section 6(h) entsprechen und keinen der fünf danach verbotenen oder beschränkten PBT-Stoffe enthalten."
+```
 
-**Nicht betroffen**, **verboten — nicht konform**, **Verwendungsausnahme** oder **offen — Klärung nötig**. Details zur allgemeinen Status-Logik: [Status & Verdicts](/glossar/status-und-verdicts).
+**Mit Bedingung:**
 
-Siehe auch: [Glossar](/glossar) · [PFAS](/regulatorik/pfas)
+```text
+"Die Erzeugnisse [...] enthalten [Stoff] (CAS [Nummer]) mit [Konzentration], [unbeabsichtigt vorhanden unterhalb der 0,1 %-De-minimis-Schwelle / innerhalb der Ausnahme [Zitat] / innerhalb der gestaffelten Frist für [Kategorie] bis [Frist]]."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Keiner der fünf 6(h)-PBT-Stoffe enthalten; Stoffe aktiv im TSCA-Inventory (oder ein reiner Erzeugnis-Scope angegeben).
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein 6(h)-Stoff ist enthalten, aber: unterhalb der 0,1 %-De-minimis-Schwelle (unbeabsichtigt; decaBDE / PIP (3:1)), innerhalb einer zitierten Ausnahme (Bedingungen erfüllt), innerhalb einer gestaffelten Frist (Kategorie \+ Frist), oder unter einer SNUR, bei der die Verwendung keine neue signifikante Verwendung darstellt.
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Ein 6(h)-PBT-Stoff liegt oberhalb des Schwellenwerts ohne Ausnahmegrund, ein Stoff ist inaktiv im Inventory, oder eine neue signifikante Verwendung wurde nicht geprüft.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Bewertung läuft noch.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt oder weicht zu TSCA aus.
+  </Accordion>
+</AccordionGroup>
+
+Pauschale "TSCA-frei"-Formulierungen: als §6(h)- plus Inventory-Bestätigung lesen (compliant), Unschärfe vermerken.
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro 6(h)-Offenlegung:
+
+- **Welcher PBT-Stoff \+ CAS-Nummer**
+- **Konzentration** und ob die Anwesenheit beabsichtigt oder unbeabsichtigt ist
+- **Ausnahmegrund**: De-minimis / Ausnahmezitat / gestaffelte Kategorie \+ Frist / SNUR-Referenz. Ein Grund ohne Zitat oder Frist gilt als unbelegt. **Ein 6(h)-Stoff ganz ohne Ausnahmegrund ist kein Bedingungsfall: Verdict `non_compliant`.**
+- **Betroffene Erzeugnisse**
+
+## Referenzversion
+
+- **`tsca-6h-2024-11`** — §6(h)-Regeln, überarbeitet Nov. 2024 (decaBDE / PIP (3:1) 0,1 %-De-minimis)
+- **`tsca-6h-2021-01`** — finale §6(h)-Regeln, 6. Jan. 2021 (fünf PBT-Stoffe)
+
+Bestimmung: explizite Nennung des Regelstands ("veröffentlicht am 6. Januar 2021") → Mapping auf den Katalog. Sonst: der zum Dokumentdatum gültige Regelstand. Sonst bleibt die Version unbestimmt.
+
+## Geltungsbereich (Scope)
+
+- Relevant für Erzeugnisse auf dem US-Markt; Importzertifizierungs-Kontext (19 CFR 12.121) wird teils referenziert.
+- Pauschale Aussagen ("alle Produkte") sind der Normalfall; 6(h)-Ausnahmen bilden eine eigene Gruppe.
+- Unpräzise "TSCA-frei"-Formulierungen decken den gesamten Lieferumfang ab, sofern keine Erzeugnisse konkret benannt werden.
+
+## Quellen
+
+- EPA §6(h)-PBT-Chemikalien: [https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/persistent-bioaccumulative-and-toxic-pbt-chemicals](https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/persistent-bioaccumulative-and-toxic-pbt-chemicals)
+- EPA TSCA-Inventory: [https://www.epa.gov/tsca-inventory](https://www.epa.gov/tsca-inventory)
+- eCFR 19 CFR 12.121 (Importzertifizierung): [https://www.ecfr.gov/current/title-19/chapter-I/part-12](https://www.ecfr.gov/current/title-19/chapter-I/part-12)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar)

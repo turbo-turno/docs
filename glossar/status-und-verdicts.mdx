@@ -6,37 +6,58 @@ icon: "circle-check"
 ---
 
 <Info>
-  Diese vier Status-Werte tauchen sowohl in **Anfragen an dich als Lieferant** als auch in **Konformitätserklärungen, die du von einem Turnus-Kunden erhältst**, in gleicher Bedeutung auf.
+  Diese fünf Status-Werte tauchen sowohl in **Anfragen an dich als Lieferant** als auch in **Konformitätserklärungen, die du von einem Turnus-Kunden erhältst**, in gleicher Bedeutung auf.
 </Info>
 
-Jede Prüfung gegen eine Regularie (REACH, RoHS, PFAS, ...) landet in einem von vier möglichen Status. Diese Seite erklärt, was jeder Status bedeutet — mit Beispieltext, wie er sinngemäß in einer Konformitätserklärung stehen könnte.
+Jede Prüfung gegen eine Regularie (REACH, RoHS, PFAS, ...) besteht aus vier Teilen — dem, was wir intern das **universelle Quadrupel** nennen:
+
+1. **Verdict** — einer von fünf Werten: `compliant` · `compliant_with_conditions` · `non_compliant` · `pending` · `unknown`.
+2. **Referenzversion** — auf welche Version einer Stoffliste, eines Grenzwertstandards oder einer Definition sich die Aussage bezieht (Listen wachsen und ändern sich über die Zeit).
+3. **Scope** — welche Erzeugnisse/Bauteile die Aussage abdeckt.
+4. **Bedingungen** — bei `compliant_with_conditions`: ein Eintrag pro offengelegter Ausnahme (Stoff, CAS-Nummer, Konzentration, betroffenes Bauteil, regularienspezifische Zusatzinfo, sowie fehlende Angaben als "Lücken").
+
+Diese Seite erklärt die fünf Verdict-Werte allgemein. Die **genaue Definition unterscheidet sich leicht je Regularie** — was z. B. bei REACH SVHC als `compliant_with_conditions` gilt, unterscheidet sich von der Definition bei RoHS. Die exakte, verbindliche Formulierung findest du im Abschnitt "Mögliche Verdicts" auf der jeweiligen [Regulatorik-Seite](/regulatorik/reach-svhc).
 
 <AccordionGroup>
-  <Accordion title="✅ Compliant — konform" defaultOpen="true">
-    Keiner der geprüften Stoffe liegt über dem jeweiligen Grenzwert. Das ist der Standardfall.
+  <Accordion title="✅ compliant — konform" defaultOpen="true">
+    Der Lieferant bestätigt positiv, dass keiner der geprüften Stoffe/Zustände oberhalb des jeweiligen Grenzwerts vorliegt bzw. keine der geprüften Bedingungen zutrifft. Das ist der Standardfall — pauschale Bestätigungen ("alle gelieferten Produkte") zählen für den abgedeckten Umfang als compliant.
 
     > _„Hiermit bestätigen wir, dass \[Produkt\] keinen Stoff der SVHC-Kandidatenliste oberhalb von 0,1 Gewichtsprozent enthält und die Beschränkungen von Annex XVII einhält.“_
   </Accordion>
 
-  <Accordion title="⚠️ Contains — enthält, keine Ausnahme">
-    Ein geprüfter Stoff liegt über dem Grenzwert, und es greift **keine** gesetzliche Ausnahme dafür. Das Produkt kann trotzdem legal vermarktet werden — es entsteht aber eine zusätzliche Informations- bzw. Meldepflicht (z. B. Art. 33 REACH: Name des Stoffs muss weitergegeben werden). "Contains" bedeutet **nicht automatisch "nicht konform"** — bei vielen Regularien (z. B. REACH SVHC) ist Anwesenheit oberhalb des Grenzwerts an sich zulässig, solange die Kommunikationspflicht erfüllt wird.
+  <Accordion title="⚠️ compliant_with_conditions — konform mit Bedingung">
+    Ein geprüfter Stoff oder Zustand liegt vor, ist aber durch eine konkret benannte Ausnahme, Zulassung, Grenzwerteinhaltung oder sonstige Bedingung ordnungsgemäß abgedeckt. **Wichtig:** Das ist ein vollwertiger Konformitäts-Status, keine Einschränkung — solange der Lieferant kommuniziert statt zu verweigern. Die Bedingung wird mit Substanz, CAS-Nummer, Konzentration, betroffenem Bauteil und ggf. regularienspezifischer Zusatzinfo (z. B. RoHS-Ausnahmenummer, SCIP-Nummer, Zulassungsnummer) offen ausgewiesen.
 
-    > _„Das Produkt enthält Blei (CAS 7439-92-1) mit ≤ 4 % in der Kupferlegierung des Kontaktkörpers. SCIP-Nr. \[...\]. Sichere Verwendung: keine Freisetzung unter normalen oder vernachlässigbaren Nutzungsbedingungen.“_
+    > _„Das Produkt enthält Blei (CAS 7439-92-1) mit ≤ 4 % in der Kupferlegierung des Kontaktkörpers. Ausnahme 6(c). SCIP-Nr. \[...\].“_
   </Accordion>
 
-  <Accordion title="✅ Compliant with exemption — konform mit Ausnahme">
-    Ein Stoff liegt über dem Grenzwert, **aber** eine konkret zitierte, noch gültige gesetzliche Ausnahme deckt diesen Fall ab (z. B. eine RoHS-Annex-III-Ausnahme für Blei in bestimmten Legierungen). **Wichtig:** Das ist ein vollwertiger Konformitäts-Status, keine Einschränkung. Die Ausnahme wird offen ausgewiesen, nicht versteckt oder abgeschwächt formuliert.
+  <Accordion title="❌ non_compliant — nicht konform">
+    Ein Grenzwert wird überschritten oder eine Vorgabe verletzt, **ohne** dass eine gültige Ausnahme, Zulassung oder sonstige Bedingung greift — oder der Lieferant erklärt selbst, dass eine Anforderung nicht erfüllt wird. Je nach Regularie kann das ein reiner Compliance-Mangel sein (z. B. Halogenfreiheit-Überschreitung) oder faktisch ein Vermarktungshindernis (z. B. REACH Annex XVII ohne erfüllte Bedingungen).
 
-    > _„Für \[Bauteil\] gilt Ausnahme 6(c) — Kupferlegierung mit bis zu 4 % Blei. Gültig bis \[Datum\]. Das Produkt ist RoHS-konform.“_
+    > _„Für \[Bauteil\] liegt kein gültiger Ausnahmegrund vor; der Grenzwert wird überschritten.“_
   </Accordion>
 
-  <Accordion title="❓ No data — keine ausreichenden Daten">
-    Es liegen (noch) nicht genug Informationen vor, um einen Status zu bestimmen — z. B. weil eine Lieferantenangabe fehlt oder unvollständig ist. Turnus arbeitet nach dem Prinzip **"fail-safe, nie fail-open"**: Fehlende Daten führen nie zu einem stillschweigenden "konform", sondern immer zu einem offenen "klären"-Status. Genau hier kommt deine Angabe als Lieferant ins Spiel — solange Daten fehlen, kann keine verbindliche Aussage getroffen werden.
+  <Accordion title="⏳ pending — Prüfung läuft">
+    Der Lieferant erklärt, dass eine Bewertung, Messung oder Datenerhebung noch läuft, oder dass eine Erklärung nachgereicht wird. Häufig z. B. bei PFAS, wo viele Lieferanten aktuell noch mitten in der Bestandsaufnahme sind.
+  </Accordion>
+
+  <Accordion title="❓ unknown — keine ausreichenden Daten">
+    Das Dokument erlaubt keine Bewertung — es schweigt zur Regularie, weicht aus oder widerspricht sich. Turnus arbeitet nach dem Prinzip **„fail-safe, nie fail-open“**: Fehlende oder unklare Daten führen nie zu einem stillschweigenden `compliant`, sondern immer zu `unknown`. Genau hier kommt deine Angabe als Lieferant ins Spiel — solange Daten fehlen, kann keine verbindliche Aussage getroffen werden.
   </Accordion>
 </AccordionGroup>
 
+## Warum die Definitionen pro Regularie leicht variieren
+
+Die fünf Werte sind überall gleich benannt, aber ihre exakte Bedeutung hängt an der jeweiligen Regularie — weil sich auch die zugrunde liegenden Rechtsmechanismen unterscheiden:
+
+- Bei **REACH SVHC** ist ein deklarierter Stoff oberhalb des Grenzwerts mit korrekter Art.-33-Kommunikation ausdrücklich `compliant_with_conditions`, nicht `non_compliant` — SVHC-Gehalt ist keine Marktzugangssperre, sondern löst eine Informationspflicht aus.
+- Bei **REACH Annex XVII** dagegen gibt es für eine gebrochene Beschränkung **keinen** Bedingungs-Weg: Sie ist immer `non_compliant`, weil das Erzeugnis dann nicht auf dem EU-Markt platziert werden darf.
+- Bei **RoHS** braucht `compliant_with_conditions` zwingend eine benannte Annex-III/IV-Ausnahmenummer — ohne Nummer ist ein Über-Grenzwert-Gehalt `non_compliant`.
+
+Die vollständige, verbindliche Definition pro Regularie steht jeweils im Abschnitt "Mögliche Verdicts" der zugehörigen [Regulatorik-Seite](/regulatorik/reach-svhc).
+
 ## Warum das wichtig ist
 
-Ein Status wird nie einfach nur mit "ja" oder "nein" beantwortet. Die genaue Formulierung entscheidet, welche Zusatzpflichten entstehen (z. B. SCIP-Meldung, Kommunikation an Kund:innen, Ausnahme-Referenz). Je genauer und vollständiger deine Angaben als Lieferant sind, desto präziser (und desto seltener "No data") kann Turnus den Status für das jeweilige Produkt bestimmen.
+Ein Status wird nie einfach nur mit "ja" oder "nein" beantwortet. Die genaue Formulierung entscheidet, welche Zusatzpflichten entstehen (z. B. SCIP-Meldung, Kommunikation an Kund:innen, Ausnahme-Referenz). Je genauer und vollständiger deine Angaben als Lieferant sind, desto präziser (und desto seltener `unknown`) kann Turnus den Status für das jeweilige Produkt bestimmen.
 
 Siehe auch: [Glossar](/glossar) · [Anleitung zum Ausfüllen](/anleitung/konformitaetserklaerung-ausfuellen)

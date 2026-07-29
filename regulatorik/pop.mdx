@@ -9,29 +9,89 @@ icon: "ban"
   Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
 </Warning>
 
-## Was ist POP?
+<Note>
+  **Status bei Turnus:** Angaben zu dieser Regularie werden aktuell zuverlässig in deiner Erklärung erkannt, aber noch nicht automatisiert ausgewertet. Deine Angaben werden erfasst und stehen für die manuelle Prüfung zur Verfügung.
+</Note>
 
-POP steht für "Persistent Organic Pollutants" — langlebige organische Schadstoffe, die im Rahmen des Stockholmer Übereinkommens über die EU-Verordnung (EU) 2019/1021 geregelt sind. Anders als bei REACH oder RoHS gibt es hier **keine Kommunikations-Option**: Gelistete Stoffe sind oberhalb harter Grenzwerte schlicht verboten — ohne Möglichkeit, das über das Gesamtprodukt zu verdünnen.
+## Was ist EU POP?
 
-## Was wird geprüft?
+Verordnung (EU) 2019/1021 setzt das Stockholmer Übereinkommen um: Stoffe in **Annex I** sind verboten oder beschränkt, mit **mg/kg-Grenzwerten für unbeabsichtigte Spurenverunreinigung (UTC)**. Die Grenzwerte gelten für Stoffe, Gemische und Erzeugnisse — einschließlich Rezyklat.
 
-Einige der wichtigsten Grenzwerte für Erzeugnisse/Materialien:
+**So liest man eine Erklärung:**
 
-| Stoff | Grenzwert |
-| --- | --- |
-| PFOS \+ Derivate | 0,1 Gew.-% im Erzeugnis; 1 µg/m² bei beschichteten Textilien/Leder |
-| PFOA \+ Salze/verwandte Stoffe | 0,025 mg/kg (25 ppb) bzw. 1 mg/kg (Summe verwandter Stoffe) |
-| PFHxS \+ Salze/verwandte Stoffe | 0,025 mg/kg (25 ppb) bzw. 1 mg/kg |
-| SCCP (kurzkettige Chlorparaffine) | ≥ 0,15 Gew.-% verboten |
-| HBCDD | 100 mg/kg |
-| PBDE (Summe, inkl. DecaBDE) | 500 mg/kg |
+- Der konforme Fall: kein Annex-I-Stoff oberhalb seines Grenzwerts, typischerweise formuliert als "nicht absichtlich zugesetzt" plus Grenzwertbestätigung.
+- "Nicht absichtlich zugesetzt" allein ist schwächer als eine Grenzwertaussage — unbeabsichtigte Spurenverunreinigung kann Grenzwerte trotzdem überschreiten.
+- **Oberhalb eines Annex-I-Grenzwerts gibt es keinen "deklarieren-und-liefern"-Weg** — de facto ein Verbot (abgesehen von engen Ausnahmen/Derogationen).
+- PFOA, PFOS und PFHxS fallen sowohl unter POP als auch unter PFAS-Regelungen; die Schwellenwerte unterscheiden sich — es gilt der strengere.
 
-## Was bedeutet das für dich als Lieferant?
+## Beispieltexte
 
-Dein Kunde fragt in der Regel die gemessene oder deklarierte Konzentration jedes gelisteten POP-Stoffs in der jeweils korrekten Einheit ab (mg/kg, Gewichtsprozent, bzw. µg/m² bei beschichteten Textilien/Leder). Liegt ein Stoff über seinem Annex-I-Grenzwert, gilt das Erzeugnis als nicht vermarktungsfähig — hier hilft auch keine Verdünnung über das Gesamtprodukt.
+**Regulär:**
 
-## Mögliche Status in deiner Anfrage
+```text
+"[Lieferant] erklärt, dass die Produkte innerhalb [Scope] keine in Annex I der Verordnung (EU) 2019/1021 gelisteten Stoffe oberhalb der geltenden Grenzwerte enthalten; POP-Stoffe werden an keiner Stelle der Fertigung absichtlich zugesetzt."
+```
 
-**Nicht vorhanden**, **vorhanden — überschreitet Annex I (verboten)**, **vorhanden — innerhalb der zulässigen Spurenmenge** oder **offen — Klärung nötig**. Details zur allgemeinen Status-Logik: [Status & Verdicts](/glossar/status-und-verdicts).
+**Mit Bedingung:**
 
-Siehe auch: [Glossar](/glossar) · [PFAS](/regulatorik/pfas)
+```text
+"[Stoff] (CAS [Nummer]) ist in [Erzeugnisse] als unbeabsichtigte Spurenverunreinigung mit [Konzentration] enthalten, unterhalb des Annex-I-Grenzwerts von [Grenzwert] / im Rahmen der Annex-I-Derogation [Eintrag], gültig bis [Datum]."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Kein Annex-I-Stoff oberhalb seines Grenzwerts; nicht absichtlich zugesetzt.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein Annex-I-Stoff ist enthalten, aber: als unbeabsichtigte Spurenverunreinigung unterhalb des Grenzwerts (mit Werten belegt), abgedeckt durch eine Annex-I-Ausnahme/Derogation (Eintrag \+ Ablaufdatum), oder in einem Erzeugnis, das bereits vor dem Beschränkungsdatum in Gebrauch war (Art. 4(2) — nur Weiterverwendung, kein neues Inverkehrbringen).
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Ein Annex-I-Stoff liegt oberhalb seines Grenzwerts, ohne Derogation — de facto verboten.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Prüfung läuft noch / Erklärung wird nachgereicht.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt, oder es ist keine grenzwertbezogene Bewertung möglich.
+  </Accordion>
+</AccordionGroup>
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro deklariertem Annex-I-Stoff:
+
+- **Stoff \+ CAS-Nummer**
+- **Gemessene/max. Konzentration (mg/kg)**
+- **Geltender Annex-I-Grenzwert** (z. B. "PFOA 0,025 mg/kg") — ohne beide Werte ist die Unterschreitungs-Aussage nicht überprüfbar.
+- Derogationsfälle: Annex-I-Eintrag \+ Ablaufdatum.
+- **Betroffene Erzeugnisse**
+
+## Referenzversion
+
+Annex I wird laufend durch delegierte Verordnungen geändert. Aktuelle Stände:
+
+- **`pop-annex1-2025`** — Annex I geändert durch Del. VO (EU) 2025/718 (PFOS) und 2025/843 (UV-328, gestaffelte Grenzwerte)
+- **`pop-annex1-2023`** — Annex I geändert durch Del. VO (EU) 2023/1608
+
+Bestimmung: explizite Nennung der ändernden delegierten Verordnungen (bei gründlichen Erklärungen üblich) → neuester abgedeckter Stand. Sonst: der zum Dokumentdatum gültige Stand. Ohne beides bleibt die Version unbestimmt.
+
+## Geltungsbereich (Scope)
+
+- Pauschale Verneinungen dominieren ("keine POP-Stoffe enthalten").
+- **Rezyklat-Gehalt zählt zum Geltungsbereich** — Aussagen zu Recyclingmaterial lockern die Grenzwerte nicht.
+- "Wir produzieren keine POPs" sagt nichts über den Gehalt aus — schwacher Beleg, keine Geltungsbereichs-Aussage.
+
+## Quellen
+
+- EUR-Lex, Verordnung (EU) 2019/1021: [https://eur-lex.europa.eu/eli/reg/2019/1021/oj](https://eur-lex.europa.eu/eli/reg/2019/1021/oj)
+- ECHA-Stoffliste zur POP-Verordnung: [https://echa.europa.eu/list-of-substances-subject-to-pops-regulation](https://echa.europa.eu/list-of-substances-subject-to-pops-regulation)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar) · [PFAS](/regulatorik/pfas)

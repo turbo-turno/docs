@@ -37,7 +37,6 @@
         "group": "Regulatorik",
         "icon": "scale-balanced",
         "pages": [
-          "regulatorik/reach",
           "regulatorik/rohs",
           "regulatorik/konfliktminerale",
           "regulatorik/pop",
@@ -45,7 +44,16 @@
           "regulatorik/tsca",
           "regulatorik/prop65",
           "regulatorik/halogenfrei",
-          "regulatorik/china-rohs"
+          "regulatorik/china-rohs",
+          {
+            "group": "REACH",
+            "icon": "flask",
+            "pages": [
+              "regulatorik/reach-svhc",
+              "regulatorik/reach-annex14",
+              "regulatorik/reach-annex17"
+            ]
+          }
         ]
       },
       {

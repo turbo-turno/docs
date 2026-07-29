@@ -1,0 +1,100 @@
+---
+title: "REACH Annex XVII — Beschränkungen"
+sidebarTitle: "Annex XVII"
+description: "Verwendungsbeschränkungen mit eigenem Grenzwert pro Eintrag — ohne Ausnahme kein Marktzugang."
+icon: "ban"
+---
+
+<Warning>
+  Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
+</Warning>
+
+<Note>
+  **Status bei Turnus:** Diese Regularie wird aktuell automatisiert interpretiert — Verdict, Referenzversion, Scope und Bedingungen werden aus deiner Erklärung abgeleitet.
+</Note>
+
+## Was ist REACH Annex XVII?
+
+Annex XVII von REACH ist die **Beschränkungsliste** (79 Einträge, Stand Apr. 2026): pro Eintrag konkrete Bedingungen für Herstellung, Inverkehrbringen und Verwendung. Jeder Eintrag hat einen eigenen Geltungsbereich und Grenzwert (%, ppm oder ppb, oder ein vollständiges Verwendungsverbot) — es gibt keinen einheitlichen Schwellenwert. Beschränkungen gelten für Erzeugnisse **einschließlich Verpackung**.
+
+**So liest man eine Erklärung:**
+
+- Der konforme Fall ist eine pauschale Bestätigung, dass alle anwendbaren Beschränkungen eingehalten werden.
+- Ein beschränkter Stoff darf enthalten sein, solange die Bedingungen seines Eintrags erfüllt sind — Konformität mit Bedingung, mit genannter Eintragsnummer (z. B. PAK in Gummiteilen, Eintrag 50; Blei, Eintrag 63).
+- **Eine gebrochene Beschränkung kennt keinen "deklarieren-und-liefern"-Weg**: Das Erzeugnis darf nicht auf dem EU-Markt platziert werden. Das ist der zentrale Unterschied zur SVHC-Informationspflicht.
+
+## Beispieltexte
+
+**Regulär:**
+
+```text
+"Die betroffenen Erzeugnisse, einschließlich ihrer Verpackung, entsprechen den Beschränkungen des Annex XVII von REACH ([Listenversion]), soweit diese Beschränkungen auf die Produkte anwendbar sind."
+```
+
+**Mit Bedingung:**
+
+```text
+"Die Erzeugnisse [...] enthalten [Stoff] (CAS [Nummer]), beschränkt unter Annex-XVII-Eintrag [Nr.]. Die Bedingungen des Eintrags sind erfüllt: [Bedingungen erfüllt, inkl. Konzentration vs. Grenzwert des Eintrags]."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Bestätigung, dass alle anwendbaren Annex-XVII-Beschränkungen eingehalten werden — pauschal oder pro benanntem Eintrag.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein beschränkter Stoff ist enthalten, die Eintragsnummer wird genannt und die Bedingungen des Eintrags werden als erfüllt bestätigt (innerhalb des Grenzwerts / zulässige Anwendung).
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Ein Grenzwert oder eine Bedingung des Eintrags wird verletzt: Das Erzeugnis darf nicht auf dem EU-Markt platziert werden.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Prüfung läuft noch / Erklärung wird nachgereicht.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Keine Bewertung für die betroffenen Erzeugnisse möglich.
+  </Accordion>
+</AccordionGroup>
+
+Gebündelte REACH-Sätze ("konform mit REACH inkl. Annex XVII") zählen als pauschale compliant-Aussagen für dieses Framework.
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro deklariertem beschränkten Stoff:
+
+- **Stoffname \+ CAS-Nummer**
+- **Annex-XVII-Eintragsnummer** — ohne sie ist die Aussage nicht überprüfbar.
+- **Bestätigung, dass die Bedingungen des Eintrags erfüllt sind**, inkl. Konzentration, wo der Eintrag einen Grenzwert setzt.
+- **Betroffene Erzeugnisse / Bauteil**
+
+Ein erklärter Verstoß ist nie ein Bedingungsfall: Verdict `non_compliant`.
+
+## Referenzversion
+
+Aktueller Stand: **79 Einträge** (ECHA-Export 29. Apr. 2026). Einträge werden fortlaufend geändert (z. B. PFHxA-Einführung ab Okt. 2026 in Eintrag 79) — eine datierte Nennung ist hier ein stärkerer Beleg als üblich.
+
+Bestimmung der Listenversion:
+
+1. **Explizite Nennung** — das Dokument nennt den Beschränkungslisten-Stand per Datum.
+2. **Dokumentdatum** — es gilt der zum Dokumentdatum gültige Stand.
+3. **Unbestimmt** — sonst bleibt die Version leer.
+
+## Geltungsbereich (Scope)
+
+- Pauschale Bestätigungen dominieren; Aussagen zu einzelnen Einträgen (PAK Eintrag 50, Blei Eintrag 63, Formaldehyd Einträge 72/77) bilden eigene Gruppen.
+- **Verpackung zählt zum Geltungsbereich** — "Erzeugnisse einschließlich Verpackung" ist die vollständige Form; Erklärungen ohne Verpackungsbezug decken weniger ab.
+- Gebündelte REACH-Absätze: derselbe Satz speist oft SVHC-, Annex-XIV- und Annex-XVII-Aussagen — pro Framework eine eigene Gruppe mit eigenem Verdict.
+
+## Quellen
+
+- ECHA: unter REACH beschränkte Stoffe: [https://echa.europa.eu/substances-restricted-under-reach](https://echa.europa.eu/substances-restricted-under-reach)
+- EUR-Lex, Verordnung 1907/2006 (konsolidiert): [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1907](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1907)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar) · [REACH SVHC](/regulatorik/reach-svhc) · [REACH Annex XIV](/regulatorik/reach-annex14)

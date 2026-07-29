@@ -9,35 +9,96 @@ icon: "microchip"
   Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
 </Warning>
 
-## Was ist RoHS?
+<Note>
+  **Status bei Turnus:** Diese Regularie wird aktuell automatisiert interpretiert — Verdict, Referenzversion, Scope und Bedingungen werden aus deiner Erklärung abgeleitet.
+</Note>
 
-RoHS (Restriction of Hazardous Substances, Richtlinie 2011/65/EU inkl. Delegierter Richtlinie (EU) 2015/863) beschränkt zehn gefährliche Stoffe in Elektro- und Elektronikgeräten (EEE). Die Grenzwerte gelten **pro homogenem Material**, nicht für das Produkt als Ganzes.
+## Was ist EU RoHS?
 
-## Was wird geprüft?
+Richtlinie 2011/65/EU ("RoHS 2") beschränkt 10 Stoffe in Elektro- und Elektronikgeräten; die Delegierte Richtlinie (EU) 2015/863 hat die vier Phthalate ergänzt (anwendbar seit 22. Juli 2019). Grenzwerte: **0,1 % w/w je homogenem Material** (Cadmium 0,01 %) — die Bezugsgröße ist das homogene Material, NICHT das Erzeugnis (anders als bei REACH).
 
-Zehn Stoffe, jeweils bezogen auf das einzelne homogene Material:
+**So liest man eine Erklärung:**
 
-- **0,01 Gewichtsprozent:** Cadmium (Cd)
-- **0,1 Gewichtsprozent:** Blei (Pb), Quecksilber (Hg), sechswertiges Chrom (Cr VI), PBB, PBDE sowie die vier Phthalate DEHP, BBP, DBP, DIBP
+- Die 10 Stoffe: Pb, Hg, Cd, Cr(VI), PBB, PBDE \+ DEHP, BBP, DBP, DIBP. Eine Erklärung, die nur 2011/65/EU zitiert oder 6 Stoffe auflistet, bezieht sich auf den alten Stand vor den Phthalaten — eine veraltete Referenz.
+- **Annex-III/IV-Ausnahmen** machen eine Verwendung oberhalb des Grenzwerts für benannte Anwendungen rechtmäßig, mit Ablaufdatum. Der Klassiker: Ausnahme 6(c) — Kupferlegierung mit bis zu 4 % Blei (Messingteile). Eine Ausnahme zählt nur, wenn sie mit Nummer zitiert wird.
+- In den Geltungsbereich fallende Geräte tragen die CE-Kennzeichnung; RoHS-Konformität ist Teil der EU-Konformitätserklärung.
+- Geltungsbereichs-Ausnahmen (Art. 2(4)) und Ersatzteil-Regelungen (Art. 4(4)–(5)) sind legitim — als Bedingung, nicht als pauschale Konformität.
 
-Die vier Phthalate gelten seit dem **22. Juli 2019** (für Medizinprodukte der Kategorie 8 sowie Überwachungs-/Kontrollinstrumente der Kategorie 9 seit 22. Juli 2021). Zeitlich befristete Ausnahmen aus Annex III/IV können einzelne Überschreitungen rechtlich abdecken.
+## Beispieltexte
 
-**Homogenes Material** (Art. 3(20)): ein Material einheitlicher Zusammensetzung, das sich nicht mehr mechanisch trennen lässt. Ein einzelner Steckverbinder zerlegt sich so z. B. in Gehäuse, Beschichtung, Kontaktlegierung und Lot — jedes wird einzeln bewertet.
+**Regulär:**
 
-## Was bedeutet das für dich als Lieferant?
+```text
+"[Lieferant] bestätigt, dass alle gelieferten Produkte der Richtlinie 2011/65/EU inkl. Delegierter Richtlinie (EU) 2015/863 entsprechen und keinen der 10 beschränkten Stoffe oberhalb der Grenzwerte in homogenen Materialien enthalten (0,1 % w/w; Cadmium 0,01 %). Ausnahmen gemäß Annex III werden nicht angewendet."
+```
 
-Wenn dein Produkt oder Material in einem elektrischen oder elektronischen Gerät verbaut wird, fragt dein Kunde über Turnus in der Regel die Konzentration aller zehn Stoffe pro homogenem Material ab — sowie, falls ein Grenzwert überschritten wird, die konkrete Ausnahme-Referenz (z. B. "Ausnahme 6(a)") inklusive Ablaufdatum.
+**Mit Bedingung:**
 
-Wichtig zu wissen: RoHS-Konformität ist eine **Voraussetzung** für die CE-Kennzeichnung, nicht die Kennzeichnung selbst. Erst wenn die Materialdaten passen, wird die technische Dokumentation erstellt, die interne Konformitätsbewertung durchgeführt und die EU-Konformitätserklärung unterschrieben — RoHS ist dabei eine von mehreren EU-Anforderungen, die zusammen zur CE-Kennzeichnung führen.
+```text
+"Folgende Erzeugnisse nutzen gültige Ausnahmen gemäß Annex III der Richtlinie 2011/65/EU: [...] — Ausnahme [Nummer], [Stoff] (CAS [Nummer]) [Konzentration] in [Material]. Die Ablaufdaten der genutzten Ausnahmen werden überwacht."
+```
 
-## Mögliche Status in deiner Anfrage
+## Mögliche Verdicts
 
-**Konform**, **konform mit Ausnahme** (mit zitierter Ausnahme-Nummer), **nicht konform** oder **offen — Klärung nötig**. Ein Status "konform mit Ausnahme" ist ein vollwertiger Konformitäts-Status, keine Einschränkung — mehr dazu unter [Status & Verdicts](/glossar/status-und-verdicts).
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Alle 10 beschränkten Stoffe liegen unterhalb der Grenzwerte in jedem homogenen Material, und es wird keine Ausnahme genutzt (oder Ausnahmen werden explizit ausgeschlossen).
+  </Accordion>
 
-## Begriffe auf dieser Seite
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein Gehalt oberhalb des Grenzwerts ist durch eine **namentlich benannte** Annex-III/IV-Ausnahme abgedeckt. Ebenso legitime Geltungsbereichs-Ausnahmen (Art. 2(4)) und Ersatzteil-Fälle (Art. 4(4)–(5)), mit genannter Begründung als Bedingung.
+  </Accordion>
 
-- **Homogenes Material** — die kleinste, nicht weiter mechanisch trennbare Materialeinheit
-- **Ausnahme (Annex III/IV)** — zeitlich befristete, konkret zitierte Freistellung von einem Grenzwert
-- **Grenzwert** — 0,01 % (Cadmium) bzw. 0,1 % (übrige neun Stoffe) je homogenem Material
+  <Accordion title="❌ non_compliant">
+    Ein beschränkter Stoff liegt im Geltungsbereich oberhalb des Grenzwerts, ohne beanspruchte Ausnahme — oder die beanspruchte Ausnahme wird als abgelaufen oder nicht anwendbar angegeben.
+  </Accordion>
 
-Siehe auch: [Glossar](/glossar)
+  <Accordion title="⏳ pending">
+    Prüfung läuft noch / Erklärung wird nachgereicht.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt, weicht aus oder widerspricht sich zu RoHS.
+  </Accordion>
+</AccordionGroup>
+
+Ein unspezifisches "wir nutzen Ausnahmen" ohne Nummern bleibt `compliant_with_conditions` mit der Lücke „Ausnahmenummer fehlt" — es wird markiert, nicht herabgestuft. Es gilt nie eine bessere Bewertung, als das Dokument hergibt; unterschiedlich behandelte Erzeugnisgruppen werden getrennt bewertet.
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro Ausnahme oder Ausschluss:
+
+- **Annex-III/IV-Ausnahmenummer** (z. B. „6(c)") — die entscheidende Angabe. **Ein Gehalt oberhalb des Grenzwerts ganz ohne Ausnahme ist kein Bedingungsfall: Verdict `non_compliant`.**
+- **Stoff \+ CAS-Nummer**
+- **Konzentration im homogenen Material** — prüft die Obergrenze der Ausnahme (6(c) ≤ 4 % Pb).
+- **Betroffene Erzeugnisse / homogenes Material**
+- **Ablaufdatum der Ausnahme**
+- Geltungsbereichs-/Ersatzteil-Bedingungen: Begründung (Art.-2(4)-Kategorie; Originalgerät \+ Markteinführungsdatum).
+
+## Referenzversion
+
+- **`rohs-2015-863`** — Annex II inkl. (EU) 2015/863, 10 Stoffe (Phthalate gültig seit 22. Juli 2019).
+- **`rohs-2011-65`** — ursprünglicher Annex II, 6 Stoffe (überholt).
+
+Bestimmung: 2011/65/EU zusammen mit (EU) 2015/863 zitiert, oder alle 10 Stoffe aufgelistet → `rohs-2015-863`. Nur 2011/65/EU zitiert oder nur 6 Stoffe gelistet → `rohs-2011-65` (veraltete Referenz, wird vermerkt). Ohne Stoffdetail und nach dem 22. Juli 2019 ausgestellt → Standardannahme `rohs-2015-863`. Sonst bleibt die Version unbestimmt.
+
+## Geltungsbereich (Scope)
+
+- Pauschaler Geltungsbereich ("alle hergestellten und gelieferten Produkte") ist der Normalfall; Ausnahme-Erzeugnisse bilden eine eigene Gruppe.
+- Auf die Bezugsgröße achten: RoHS-Aussagen beziehen sich auf das **homogene Material** — Werte auf Erzeugnisebene sind kein RoHS-Nachweis.
+- Ausnahmen erscheinen oft artikelbezogen in Anhangstabellen ("Ja, mit Ausnahme 6c") — Teilenummern wörtlich übernehmen.
+- Geltungsbereichs- und Ersatzteil-Ausnahmen bilden immer eine eigene Bedingungsgruppe, nie eine pauschale Konformität.
+
+## Quellen
+
+- Richtlinie 2011/65/EU: [https://eur-lex.europa.eu/eli/dir/2011/65/oj](https://eur-lex.europa.eu/eli/dir/2011/65/oj)
+- Delegierte Richtlinie (EU) 2015/863: [https://eur-lex.europa.eu/eli/dir\_del/2015/863/oj](https://eur-lex.europa.eu/eli/dir_del/2015/863/oj)
+- ECHA RoHS-Ausnahmeregister: [https://echa.europa.eu/exemptions-art-4-restrictions-rohs](https://echa.europa.eu/exemptions-art-4-restrictions-rohs)
+
+<Info>
+  **Aktuelle Entwicklung:** Ausnahme 6(a) läuft am 11.12.2026 ab — Erklärungen, die sich darauf stützen, benötigen eine Verlängerung oder Umkonstruktion. Ausnahmeverlängerungen werden in Batches entschieden; der Ablauf einer zitierten Ausnahme macht Erklärungen mit Bedingung stillschweigend ungültig.
+</Info>
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar)
