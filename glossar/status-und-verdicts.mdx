@@ -1,0 +1,42 @@
+---
+title: "Status & Verdicts"
+sidebarTitle: "Status & Verdicts"
+description: "Was 'Compliant', 'Contains', 'Compliant with exemption' und 'No data' konkret bedeuten."
+icon: "circle-check"
+---
+
+<Info>
+  Diese vier Status-Werte tauchen sowohl in **Anfragen an dich als Lieferant** als auch in **Konformitätserklärungen, die du von einem Turnus-Kunden erhältst**, in gleicher Bedeutung auf.
+</Info>
+
+Jede Prüfung gegen eine Regularie (REACH, RoHS, PFAS, ...) landet in einem von vier möglichen Status. Diese Seite erklärt, was jeder Status bedeutet — mit Beispieltext, wie er sinngemäß in einer Konformitätserklärung stehen könnte.
+
+<AccordionGroup>
+  <Accordion title="✅ Compliant — konform" defaultOpen="true">
+    Keiner der geprüften Stoffe liegt über dem jeweiligen Grenzwert. Das ist der Standardfall.
+
+    > _„Hiermit bestätigen wir, dass \[Produkt\] keinen Stoff der SVHC-Kandidatenliste oberhalb von 0,1 Gewichtsprozent enthält und die Beschränkungen von Annex XVII einhält.“_
+  </Accordion>
+
+  <Accordion title="⚠️ Contains — enthält, keine Ausnahme">
+    Ein geprüfter Stoff liegt über dem Grenzwert, und es greift **keine** gesetzliche Ausnahme dafür. Das Produkt kann trotzdem legal vermarktet werden — es entsteht aber eine zusätzliche Informations- bzw. Meldepflicht (z. B. Art. 33 REACH: Name des Stoffs muss weitergegeben werden). "Contains" bedeutet **nicht automatisch "nicht konform"** — bei vielen Regularien (z. B. REACH SVHC) ist Anwesenheit oberhalb des Grenzwerts an sich zulässig, solange die Kommunikationspflicht erfüllt wird.
+
+    > _„Das Produkt enthält Blei (CAS 7439-92-1) mit ≤ 4 % in der Kupferlegierung des Kontaktkörpers. SCIP-Nr. \[...\]. Sichere Verwendung: keine Freisetzung unter normalen oder vernachlässigbaren Nutzungsbedingungen.“_
+  </Accordion>
+
+  <Accordion title="✅ Compliant with exemption — konform mit Ausnahme">
+    Ein Stoff liegt über dem Grenzwert, **aber** eine konkret zitierte, noch gültige gesetzliche Ausnahme deckt diesen Fall ab (z. B. eine RoHS-Annex-III-Ausnahme für Blei in bestimmten Legierungen). **Wichtig:** Das ist ein vollwertiger Konformitäts-Status, keine Einschränkung. Die Ausnahme wird offen ausgewiesen, nicht versteckt oder abgeschwächt formuliert.
+
+    > _„Für \[Bauteil\] gilt Ausnahme 6(c) — Kupferlegierung mit bis zu 4 % Blei. Gültig bis \[Datum\]. Das Produkt ist RoHS-konform.“_
+  </Accordion>
+
+  <Accordion title="❓ No data — keine ausreichenden Daten">
+    Es liegen (noch) nicht genug Informationen vor, um einen Status zu bestimmen — z. B. weil eine Lieferantenangabe fehlt oder unvollständig ist. Turnus arbeitet nach dem Prinzip **"fail-safe, nie fail-open"**: Fehlende Daten führen nie zu einem stillschweigenden "konform", sondern immer zu einem offenen "klären"-Status. Genau hier kommt deine Angabe als Lieferant ins Spiel — solange Daten fehlen, kann keine verbindliche Aussage getroffen werden.
+  </Accordion>
+</AccordionGroup>
+
+## Warum das wichtig ist
+
+Ein Status wird nie einfach nur mit "ja" oder "nein" beantwortet. Die genaue Formulierung entscheidet, welche Zusatzpflichten entstehen (z. B. SCIP-Meldung, Kommunikation an Kund:innen, Ausnahme-Referenz). Je genauer und vollständiger deine Angaben als Lieferant sind, desto präziser (und desto seltener "No data") kann Turnus den Status für das jeweilige Produkt bestimmen.
+
+Siehe auch: [Glossar](/glossar) · [Anleitung zum Ausfüllen](/anleitung/konformitaetserklaerung-ausfuellen)

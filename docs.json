@@ -29,7 +29,8 @@
         "group": "Glossar",
         "icon": "book-open",
         "pages": [
-          "glossar"
+          "glossar",
+          "glossar/status-und-verdicts"
         ]
       },
       {
@@ -38,7 +39,13 @@
         "pages": [
           "regulatorik/reach",
           "regulatorik/rohs",
-          "regulatorik/konfliktminerale"
+          "regulatorik/konfliktminerale",
+          "regulatorik/pop",
+          "regulatorik/pfas",
+          "regulatorik/tsca",
+          "regulatorik/prop65",
+          "regulatorik/halogenfrei",
+          "regulatorik/china-rohs"
         ]
       },
       {
