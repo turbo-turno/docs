@@ -1,0 +1,93 @@
+---
+title: "California Prop 65"
+sidebarTitle: "Prop 65"
+description: "Expositionsbasierte Warnpflicht — keine reine Konzentrationsgrenze."
+icon: "triangle-exclamation"
+---
+
+<Warning>
+  Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
+</Warning>
+
+<Note>
+  **Status bei Turnus:** Angaben zu dieser Regularie werden aktuell zuverlässig in deiner Erklärung erkannt, aber noch nicht automatisiert ausgewertet. Deine Angaben werden erfasst und stehen für die manuelle Prüfung zur Verfügung.
+</Note>
+
+## Was ist California Prop 65?
+
+Kaliforniens Proposition 65 (Safe Drinking Water and Toxic Enforcement Act von 1986) ist ein **expositionsbasiertes Warngesetz, kein Inhaltsverbot**: Kein Unternehmen darf Personen in Kalifornien wissentlich einem gelisteten Stoff (rund 900 auf der OEHHA-Liste) aussetzen, ohne eine **klare und angemessene Warnung** — es sei denn, die Exposition liegt unterhalb des **Safe-Harbor-Werts** (NSRL/MADL). Unternehmen mit weniger als 10 Beschäftigten sind ausgenommen.
+
+**So liest man eine Erklärung:**
+
+- Der Inhalt allein entscheidet nichts — die Exposition entscheidet. Lieferanten quantifizieren Exposition selten; die zwei realistischen Bedingungsfälle sind "unterhalb Safe Harbor (geprüft)" und "Warnung wird bereitgestellt".
+- Eine konforme Warnung (27 CCR Art. 6) nennt mindestens einen Stoff pro Endpunkt (Krebs / Fortpflanzung) sowie die URL P65Warnings.ca.gov; Kurzform-Regeln gelten seit 2025, verpflichtend für ab 2028 hergestellte Produkte.
+- Die eigene Unter-10-Beschäftigte-Ausnahme eines Lieferanten befreit uns NICHT von der nachgelagerten Warnpflicht.
+
+## Beispieltexte
+
+**Regulär:**
+
+```text
+"[Lieferant] erklärt, dass die Produkte innerhalb [Scope] nach bestem Wissen keine Chemikalien der aktuellen Proposition-65-Liste in einer Weise enthalten, die eine Warnung erforderlich machen würde."
+```
+
+**Mit Bedingung:**
+
+```text
+"Die Erzeugnisse [...] enthalten [Chemikalie] (CAS [Nummer]), gelistet unter Proposition 65 für [Endpunkt]. [Die Exposition liegt unterhalb des Safe-Harbor-Werts ([Wert], Grundlage: [Bewertung]) / folgende Warnung wird bereitgestellt: '[wörtlicher Warntext inkl. URL P65Warnings.ca.gov]']."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Kein gelisteter Stoff erfordert eine Warnung für das gelieferte Erzeugnis: keiner enthalten, oder die Exposition wurde bei/unter dem Safe-Harbor-Wert bewertet.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein gelisteter Stoff ist enthalten, aber korrekt behandelt: unterhalb des Safe-Harbor-Werts (Stoff \+ Bewertungsgrundlage angegeben), eine konforme Warnung wird bereitgestellt (wörtlicher Text inkl. URL), oder eine Ausnahme wird mit Begründung beansprucht.
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Exposition oberhalb des Safe-Harbor-Werts (oder nicht bewertet) und keine Warnung bereitgestellt.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Bewertung läuft noch.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt — der häufigste Fall in EU-Lieferantenerklärungen; Prop 65 wird oft schlicht nicht adressiert.
+  </Accordion>
+</AccordionGroup>
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro gelisteter Chemikalie:
+
+- **Chemikalie \+ CAS-Nummer**
+- **Endpunkt** (Krebs / Fortpflanzung / beides)
+- Unter-Safe-Harbor-Aussagen: Bewertungsgrundlage \+ Safe-Harbor-Wert (ohne Bewertung fällt die Aussage in Warnungs-Territorium)
+- Warnung-bereitgestellt-Aussagen: **wörtlicher Warntext inkl. der URL P65Warnings.ca.gov**
+- Ausnahme-Aussagen: Begründung nach § 25249.11 — eine Ausnahme des Lieferanten ist nicht automatisch unsere
+
+## Referenzversion
+
+Die OEHHA-Liste wird ca. vierteljährlich aktualisiert; Lieferanten zitieren praktisch nie eine Version. Ein rollierender Eintrag — die Liste gilt als aktuell zum Dokumentdatum.
+
+Bestimmung: explizite Nennung eines datierten Listenstands (selten) → Mapping mit Datumsvermerk. Sonst: Standard ist der rollierende Eintrag. Ist die Erklärung zu vage, bleibt die Version leer.
+
+## Geltungsbereich (Scope)
+
+- Bezugsrahmen ist das **Erzeugnis in Lieferform** und die Exposition der Endnutzer:innen in Kalifornien — nicht das homogene Material.
+- Pauschale Konformitätssätze ("entsprechen Proposition 65") decken den gesamten Lieferumfang ab.
+- Warnpflichtige Erzeugnisse bilden eine eigene Gruppe; der Warntext ist die Bedingung, nicht der Geltungsbereich.
+
+## Quellen
+
+- OEHHA Proposition 65: [https://oehha.ca.gov/proposition-65](https://oehha.ca.gov/proposition-65)
+- P65Warnings-Portal: [https://www.p65warnings.ca.gov](https://www.p65warnings.ca.gov)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar)

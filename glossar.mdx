@@ -1,0 +1,64 @@
+---
+title: "Glossar"
+sidebarTitle: "Glossar"
+description: "Die wichtigsten Begriffe aus Turnus-Deklarationen kurz erklärt."
+icon: "book-open"
+---
+
+<Info>
+  Suchst du speziell, was ein **Status** wie "compliant" oder "compliant\_with\_conditions" in deiner Anfrage bedeutet? Das erklären wir separat und ausführlich unter [Status & Verdicts](/glossar/status-und-verdicts).
+</Info>
+
+<AccordionGroup>
+  <Accordion title="CAS-Nummer">
+    Die CAS-Nummer (Chemical Abstracts Service) identifiziert eine chemische Substanz eindeutig — unabhängig vom Handelsnamen. Sie ist der zentrale Schlüssel, über den eine Materialangabe mit allen relevanten Regularien abgeglichen wird: Ein und dieselbe CAS-Nummer wird gegen REACH, RoHS, POP, PFAS und weitere Listen gleichzeitig geprüft.
+  </Accordion>
+
+  <Accordion title="Homogenes Material">
+    Ein Material mit einheitlicher Zusammensetzung, das sich nicht mehr mechanisch in Bestandteile zerlegen lässt (z. B. durch Abschrauben, Schneiden, Schleifen). Ein einzelner Steckverbinder besteht so z. B. aus mehreren homogenen Materialien: Gehäuse, Beschichtung, Kontaktlegierung, Lot — jedes davon wird bei RoHS und ähnlichen Regularien einzeln bewertet, nicht als Ganzes.
+  </Accordion>
+
+  <Accordion title="Artikel / Erzeugnis">
+    Ein Gegenstand mit einer bestimmten Form, Oberfläche oder Gestalt, die seine Funktion stärker bestimmt als seine chemische Zusammensetzung (REACH-Definition). Wichtig: Nach dem EuGH-Grundsatz "einmal Erzeugnis, immer Erzeugnis" (C-106/14) wird ein Schwellenwert wie 0,1 % SVHC gegen **jedes einzelne Bauteil-Erzeugnis** geprüft — auch wenn es Teil eines größeren Produkts ist. Es wird **nicht** über das gesamte Endprodukt verdünnt gerechnet.
+  </Accordion>
+
+  <Accordion title="Full Material Declaration (FMD) & Declaration Class">
+    Eine vollständige Materialangabe: jede enthaltene Substanz mit CAS-Nummer, Konzentration und Einbauort, meist im Format IEC 62474 oder IPC-1752A. Die "Declaration Class" (A–D) beschreibt die Tiefe der Angabe — Class C reicht für SVHC/REACH, Class D (volle Zusammensetzung) wird für die niedrigen Grenzwerte von RoHS, POP oder PFAS gebraucht. Eine vollständige FMD erlaubt es, bei jeder neuen Gesetzesänderung ohne erneute Lieferantenanfrage nachzuprüfen ("Re-Screening"); eine reine Teilangabe (nur Ja/Nein zu bestimmten Stoffen) nicht.
+  </Accordion>
+
+  <Accordion title="SVHC & Candidate List">
+    SVHC = "Substance of Very High Concern", ein besonders besorgniserregender Stoff. Die ECHA (Europäische Chemikalienagentur) führt dazu die sogenannte Candidate List, die etwa zweimal jährlich erweitert wird (aktuell 253 Einträge, Stand Feb. 2026). Ist ein SVHC-Stoff oberhalb von 0,1 Gewichtsprozent in einem Erzeugnis enthalten, greift Art. 33 REACH.
+  </Accordion>
+
+  <Accordion title="Art. 33 REACH (Informationspflicht)">
+    Verpflichtet dazu, den Namen eines SVHC-Stoffs oberhalb 0,1 % w/w automatisch an gewerbliche Kunden weiterzugeben — unabhängig von Mengenschwellen. Reine Anwesenheit oberhalb des Schwellenwerts reicht als Auslöser, ein Mengen- oder Expositionstest ist nicht nötig.
+  </Accordion>
+
+  <Accordion title="SCIP-Datenbank">
+    Seit 5. Januar 2021 muss jedes in der EU vermarktete Erzeugnis mit einem SVHC-Anteil über 0,1 % bei der SCIP-Datenbank der ECHA gemeldet werden. Die dabei vergebene SCIP-Dossier-Nummer wird entlang der Lieferkette weitergereicht.
+  </Accordion>
+
+  <Accordion title="REACH Annex XVII & Annex XIV">
+    **Annex XVII** listet konkrete Verwendungsbeschränkungen für einzelne Stoffe (z. B. Blei, bestimmte PFAS) mit jeweils eigenem Grenzwert. **Annex XIV** ist die Zulassungsliste: Stoffe darauf dürfen nach einem festgelegten "Sunset Date" nur noch mit gültiger Zulassung für die jeweilige Verwendung eingesetzt werden.
+  </Accordion>
+
+  <Accordion title="Ausnahme / Exemption (RoHS Annex III/IV)">
+    Auch wenn ein Material einen RoHS-Grenzwert überschreitet, kann das Produkt konform sein — sofern eine konkrete, noch gültige Ausnahme aus Annex III oder IV zitiert wird (z. B. "Ausnahme 6(c) — Blei in Kupferlegierung bis 4 %"). Eine Ausnahme macht die Deklaration nicht "weniger konform": Ein Status wie "compliant\_with\_conditions" ist ein voller Compliance-Status, siehe [Status & Verdicts](/glossar/status-und-verdicts).
+  </Accordion>
+
+  <Accordion title="Grenzwert / Schwellenwert">
+    Die maximal zulässige Konzentration einer Substanz, ab der eine Regularie greift. Die Bezugsgröße unterscheidet sich je Regularie: bei RoHS und Halogenfreiheit ist es das homogene Material, bei REACH SVHC das einzelne Erzeugnis, bei manchen PFAS-Regeln die exponierte Person statt eine Konzentration. Details auf den jeweiligen [Regulatorik-Seiten](/regulatorik/reach-svhc).
+  </Accordion>
+
+  <Accordion title="Golden BOM / Compliance-Status-Feld">
+    Jede Regularie wird intern in ein eigenes Status-Feld der Stückliste (BOM) übersetzt, z. B. "RoHS Compliance Info" oder "SVHC Compliance Info". Dieses Feld — nicht ein PDF in einem Ordner — ist der eigentliche Compliance-Nachweis, aus dem Turnus deine ein- und ausgehenden Deklarationen erzeugt.
+  </Accordion>
+
+  <Accordion title="Partial vs. Full Declaration">
+    Eine **Full Declaration** gibt die vollständige Zusammensetzung an und kann jederzeit gegen neue oder geänderte Regularien neu geprüft werden. Eine **Partial Declaration** bestätigt nur Anwesenheit/Abwesenheit bestimmter gelisteter Stoffe oberhalb ihres Grenzwerts — ausreichend für eine aktuelle Ja/Nein-Aussage, aber nicht erneut auswertbar, wenn eine Liste erweitert wird.
+  </Accordion>
+
+  <Accordion title="Sorgfaltspflicht (Due Diligence) & 3TG / Konfliktminerale">
+    Die Verpflichtung, die eigene Lieferkette aktiv auf bestimmte Risiken zu prüfen und zu dokumentieren. Bei Konfliktmineralen betrifft das Zinn, Tantal, Wolfram und Gold ("3TG") — mehr dazu auf der [Konfliktminerale-Seite](/regulatorik/konfliktminerale).
+  </Accordion>
+</AccordionGroup>

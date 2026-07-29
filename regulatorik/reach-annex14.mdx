@@ -1,0 +1,100 @@
+---
+title: "REACH Annex XIV — Zulassung"
+sidebarTitle: "Annex XIV"
+description: "Zulassungspflichtige Stoffe: nach dem Sunset-Date nur mit gültiger Zulassung für die konkrete Verwendung."
+icon: "stamp"
+---
+
+<Warning>
+  Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
+</Warning>
+
+<Note>
+  **Status bei Turnus:** Diese Regularie wird aktuell automatisiert interpretiert — Verdict, Referenzversion, Scope und Bedingungen werden aus deiner Erklärung abgeleitet.
+</Note>
+
+## Was ist REACH Annex XIV?
+
+Annex XIV von REACH ist die **Zulassungsliste**: SVHC-Stoffe, die von der Kandidatenliste in dieses Verfahren übernommen wurden (Art. 58). Nach dem **Sunset-Date** eines Stoffs benötigt seine _Verwendung_ in der EU eine Zulassung für genau diese Verwendung. Die reine Anwesenheit in importierten Erzeugnissen ist nicht per se verboten — deshalb erklären Lieferanten meist, dass kein Annex-XIV-Stoff _enthalten_ ist.
+
+**So liest man eine Erklärung:**
+
+- Verwendungsbasierte Regelung: **kein Konzentrations-Schwellenwert**. Entscheidend ist, ob der Stoff überhaupt verwendet/enthalten ist und ob eine gültige Zulassung (eigene oder vorgelagert) die Verwendung abdeckt.
+- Pauschale Verneinungen ("kein Annex-XIV-Stoff enthalten") sind der normale konforme Fall.
+- Ein vor dem letzten Antragstermin gestellter Zulassungsantrag erlaubt die weitere Verwendung bis zur Entscheidung — ein echter `pending`-Fall.
+
+## Beispieltexte
+
+**Regulär:**
+
+```text
+"Die gelieferten Erzeugnisse enthalten keine zulassungspflichtigen Stoffe gemäß Annex XIV von REACH ([Listenversion]), und alle geltenden Zulassungsanforderungen werden eingehalten."
+```
+
+**Mit Bedingung:**
+
+```text
+"Die Erzeugnisse [...] enthalten [Stoff] (CAS [Nummer]), gelistet in Annex XIV. Die Verwendung ist durch Zulassung Nr. [...] / eine vorgelagerte Zulassung für die Verwendung '[...]' abgedeckt."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Positive Bestätigung, dass kein Annex-XIV-Stoff für die betroffenen Erzeugnisse enthalten/verwendet wird.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Ein Annex-XIV-Stoff ist enthalten/verwendet, und der Lieferant benennt eine erteilte oder vorgelagerte Zulassung (oder eine Annex-XIV-Ausnahme), die die Verwendung abdeckt.
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Ein Annex-XIV-Stoff wird nach seinem Sunset-Date ohne beanspruchte Zulassung verwendet, oder die Zulassung wird als abgelehnt oder abgelaufen angegeben.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Ein Zulassungsantrag ist gestellt und die Entscheidung steht aus, oder der Lieferant erklärt, dass die Prüfung noch läuft.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Das Dokument erlaubt keine Bewertung (schweigt, weicht aus oder widerspricht sich).
+  </Accordion>
+</AccordionGroup>
+
+Annex-XIV-Aussagen stecken häufig in einem gebündelten REACH-Satz ("konform mit REACH inkl. Annex XIV und XVII") — das zählt als pauschale compliant-Aussage für dieses Framework.
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro deklariertem Annex-XIV-Stoff:
+
+- **Stoffname \+ CAS-Nummer**
+- **Betroffene Erzeugnisse / Bauteil**
+- **Zulassungsnummer, vorgelagerte Zulassungsreferenz oder freigestellte Verwendung** — die entscheidende Angabe.
+- Die Konzentration ist hier nur informativ — diese Regelung kennt keinen Schwellenwert.
+
+**Wird für eine Verwendung nach dem Sunset-Date überhaupt keine Zulassung beansprucht, ist das kein Bedingungsfall: Verdict `non_compliant`.**
+
+## Referenzversion
+
+Der Zulassungslisten-Stand wird unregelmäßig durch einzelne Kommissionsverordnungen geändert — nicht in einem festen Halbjahresrhythmus. Aktuell in Lieferantenerklärungen häufig zitiert: Stand 1. Nov. 2023.
+
+Bestimmung der Listenversion:
+
+1. **Explizite Nennung** — das Dokument nennt den Zulassungslisten-Stand per Datum oder änderungsverordnung.
+2. **Dokumentdatum** — es gilt der zum Dokumentdatum gültige Stand.
+3. **Unbestimmt** — sonst bleibt die Version leer; das Fehlen einer Nennung ist hier nicht ungewöhnlich.
+
+## Geltungsbereich (Scope)
+
+- Fast immer **pauschale Verneinungen** ("keine zulassungspflichtigen Stoffe enthalten") für das gesamte Lieferprogramm.
+- Ausnahmen benennen konkrete Stoffe und Verwendungen; die Verwendungsbeschreibung sollte wörtlich übernommen werden — Zulassungen werden pro Verwendung erteilt.
+- Häufig gebündelt mit SVHC und Annex XVII in einem REACH-Absatz: derselbe Satz kann Aussagen zu allen drei REACH-Frameworks liefern, jeweils mit eigenem Verdict.
+
+## Quellen
+
+- ECHA-Zulassungsliste: [https://echa.europa.eu/authorisation-list](https://echa.europa.eu/authorisation-list)
+- EUR-Lex, Verordnung 1907/2006 (konsolidiert): [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1907](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1907)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar) · [REACH SVHC](/regulatorik/reach-svhc) · [REACH Annex XVII](/regulatorik/reach-annex17)

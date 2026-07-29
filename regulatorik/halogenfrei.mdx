@@ -1,0 +1,96 @@
+---
+title: "Halogenfreiheit"
+sidebarTitle: "Halogenfreiheit"
+description: "Ein freiwilliger Industriestandard – kein Gesetz."
+icon: "leaf"
+---
+
+<Warning>
+  Diese Seite bietet eine allgemeine Einordnung zur Orientierung und ersetzt keine Rechtsberatung.
+</Warning>
+
+<Note>
+  **Status bei Turnus:** Angaben zu dieser Regularie werden aktuell zuverlässig in deiner Erklärung erkannt, aber noch nicht automatisiert ausgewertet. Deine Angaben werden erfasst und stehen für die manuelle Prüfung zur Verfügung.
+</Note>
+
+## Was ist Halogenfreiheit?
+
+"Halogenfrei" ist eine **technische/vertragliche Spezifikation, kein Gesetz**. Der maßgebliche Standard ist IEC 61249-2-21: **Chlor ≤ 900 ppm, Brom ≤ 900 ppm, Gesamthalogene ≤ 1.500 ppm — bezogen auf das gesamte Erzeugnis** (REACH-artiger Nenner, anders als bei RoHS mit dem homogenen Material). Gesetzliche Verbote einzelner halogenierter Stoffe (PBB/PBDE, SCCP, decaBDE, ...) sind in RoHS, POP und REACH geregelt — nicht hier.
+
+**So liest man eine Erklärung:**
+
+- Eine Halogenfreiheit-Abweichung ist ein Spezifikationsfehler, keine Rechtswidrigkeit — sie scheitert aber an diesem Framework.
+- Alternative Standards (IEC 62474, JEDEC JS709) setzen Br\+Cl-Grenzwerte auf **Materialebene** — eine andere, schwächere Aussage als IEC 61249-2-21.
+- Typische Chlorträger: Kabel, Schrumpfschlauch, Klemmen (PVC); Brom: Flammschutzmittel in Steckverbindern und Kabeln.
+
+## Beispieltexte
+
+**Regulär:**
+
+```text
+"[Lieferant] erklärt, dass die Produkte innerhalb [Scope] die Halogenfreiheit-Anforderungen von IEC 61249-2-21 erfüllen: Gesamthalogene ≤ 1.500 ppm, Brom ≤ 900 ppm, Chlor ≤ 900 ppm, bezogen auf das gesamte Erzeugnis."
+```
+
+**Mit Bedingung:**
+
+```text
+"Die Erzeugnisse [...] sind halogenarm nach [Standard]: Cl [Wert] ppm, Br [Wert] ppm ([Stichprobengrundlage], Prüfmethode [Methode])."
+```
+
+## Mögliche Verdicts
+
+<AccordionGroup>
+  <Accordion title="✅ compliant" defaultOpen="true">
+    Erfüllt IEC 61249-2-21 (Cl ≤ 900 ppm, Br ≤ 900 ppm, gesamt ≤ 1.500 ppm, gesamtes Erzeugnis) — pauschale Bestätigung oder Messwerte.
+  </Accordion>
+
+  <Accordion title="⚠️ compliant_with_conditions">
+    Eine Halogenaussage auf anderer Grundlage: halogenarm nach einem alternativen Standard (IEC 62474 / JEDEC JS709 — Standard \+ Werte genannt), oder Werte innerhalb der Grenzwerte, aber nur auf Materialebene gemessen (falscher Nenner, offengelegt).
+  </Accordion>
+
+  <Accordion title="❌ non_compliant">
+    Überschreitet die IEC-61249-2-21-Grenzwerte. Ein vertraglicher Mangel, keine Rechtswidrigkeit — gesetzliche Stoffverbote werden bei RoHS/POP/REACH geprüft.
+  </Accordion>
+
+  <Accordion title="⏳ pending">
+    Messung/Bewertung läuft noch.
+  </Accordion>
+
+  <Accordion title="❓ unknown">
+    Schweigt, oder keine belastbare Grundlage angegeben.
+  </Accordion>
+</AccordionGroup>
+
+## Bei "compliant\_with\_conditions": was anzugeben ist
+
+Eine Bedingung pro abweichender oder alternativer Aussage:
+
+- **Gemessenes Cl und Br** (ppm, gesamtes Erzeugnis)
+- **Gesamthalogene (ppm)**
+- **Zitierter Standard** (IEC 61249-2-21 / IEC 62474 / JEDEC JS709)
+- **Prüfmethode** (EN 14582 / IEC 62321-3-2)
+- **Stichprobengrundlage** — Daten nur auf Materialebene sind der falsche Nenner für IEC 61249-2-21
+
+Stoffidentität ist hier meist nicht relevant — Halogengehalt wird elementar gemessen; Substanz/CAS bleibt ohne Lücke leer.
+
+## Referenzversion
+
+- **`hf-iec-61249-2-21`** — IEC 61249-2-21, Grenzwerte auf Erzeugnisebene (Cl/Br 900 ppm, gesamt 1.500 ppm)
+- **`hf-iec-62474-js709`** — IEC 62474 / JEDEC JS709, halogenarm auf Materialebene
+
+Bestimmung: der in der Erklärung genannte Standard entscheidet. Es gibt **keinen Datums-Fallback** — Standards ändern sich nicht kalenderbasiert; ohne Zitat bleibt die Referenz leer.
+
+## Geltungsbereich (Scope)
+
+- Der **Nenner "gesamtes Erzeugnis"** ist der Geltungsbereichs-Test: Aussagen je homogenem Material gelten nicht automatisch für das Erzeugnis.
+- Der Standard stammt aus der Leiterplattenfertigung — Erklärungen decken oft nur Platinen ab; prüfen, ob Kabel/Gehäuse eingeschlossen sind.
+- Typische Träger (PVC-Teile, Flammschutzmittel) sind die häufigsten Ausnahmefälle.
+
+## Quellen
+
+- IEC 61249-2-21: [https://webstore.iec.ch/en/publication/5000](https://webstore.iec.ch/en/publication/5000)
+- CALCE-Überblick zu halogenfreier Elektronik: [https://calce.umd.edu/halogen-free-electronics](https://calce.umd.edu/halogen-free-electronics)
+
+---
+
+Siehe auch: [Status & Verdicts](/glossar/status-und-verdicts) · [Glossar](/glossar)

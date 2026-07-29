@@ -1,13 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Turnus Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#C9B400",
+    "light": "#FFF440",
+    "dark": "#C9B400"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/favicon.png",
+    "dark": "/favicon.svg"
+  },
   "navigation": {
     "pages": [
       {
@@ -18,36 +21,70 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    "groups": [
+      {
+        "group": "Start",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "Glossar",
+        "icon": "book-open",
+        "pages": [
+          "glossar",
+          "glossar/status-und-verdicts"
+        ]
+      },
+      {
+        "group": "Regulatorik",
+        "icon": "scale-balanced",
+        "pages": [
+          "regulatorik/rohs",
+          "regulatorik/konfliktminerale",
+          "regulatorik/pop",
+          "regulatorik/pfas",
+          "regulatorik/tsca",
+          "regulatorik/prop65",
+          "regulatorik/halogenfrei",
+          "regulatorik/china-rohs",
+          {
+            "group": "REACH",
+            "icon": "flask",
+            "pages": [
+              "regulatorik/reach-svhc",
+              "regulatorik/reach-annex14",
+              "regulatorik/reach-annex17"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Anleitung",
+        "icon": "list-check",
+        "pages": [
+          "anleitung/konformitaetserklaerung-ausfuellen"
+        ]
+      },
+      {
+        "group": "FAQ",
+        "icon": "circle-question",
+        "pages": [
+          "faq"
+        ]
+      }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/light.svg",
+    "dark": "/images/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "turnus.ai",
+      "href": "https://turnus.ai"
     }
   },
   "contextual": {
@@ -64,9 +101,21 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "description": "Regulatorik-Glossar und Produktdokumentation von Turnus – Erklärungen zu Konformitätserklärungen, REACH, RoHS, Konfliktminerale und mehr für Lieferanten und Kunden.",
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#F7F7F5",
+      "dark": "#1D1D1F"
+    }
+  },
+  "fonts": {
+    "family": "Plus Jakarta Sans",
+    "weight": 400
   }
 }
