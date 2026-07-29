@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Turnus Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0E7C86",
+    "light": "#14B8A6",
+    "dark": "#0B5D64"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -18,20 +18,44 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    "groups": [
+      {
+        "group": "Start",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "Glossar",
+        "icon": "book-open",
+        "pages": [
+          "glossar"
+        ]
+      },
+      {
+        "group": "Regulatorik",
+        "icon": "scale-balanced",
+        "pages": [
+          "regulatorik/reach",
+          "regulatorik/rohs",
+          "regulatorik/konfliktminerale"
+        ]
+      },
+      {
+        "group": "Anleitung",
+        "icon": "list-check",
+        "pages": [
+          "anleitung/konformitaetserklaerung-ausfuellen"
+        ]
+      },
+      {
+        "group": "FAQ",
+        "icon": "circle-question",
+        "pages": [
+          "faq"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -68,5 +92,6 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  }
+  },
+  "description": "Regulatorik-Glossar und Produktdokumentation von Turnus – Erklärungen zu Konformitätserklärungen, REACH, RoHS, Konfliktminerale und mehr für Lieferanten und Kunden."
 }
